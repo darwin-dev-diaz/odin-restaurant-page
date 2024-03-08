@@ -93,3 +93,25 @@ img {
   padding: 20px;
   border-radius: 20px;
 }
+
+.about-container{
+  width: 700px;
+  height: 500px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 40px;
+  padding-top: 45px;
+}
+.about-container > h2 {
+  font-size: 40px;
+}
+.paragraphs{
+  padding: 0 45px 0 45px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

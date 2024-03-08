@@ -1,8 +1,22 @@
-import './reset.css';
-import './style.css';
-import {imageContainer} from "./homepage.js"
-import { menuContainer } from './menu.js';
+import "./reset.css";
+import "./style.css";
+import { imageContainer } from "./homepage.js";
+import { menuContainer } from "./menu.js";
+import { aboutContainer } from "./about.js";
 
-document.querySelector("#content").appendChild(menuContainer);
+const content = document.querySelector("#content");
+content.appendChild(imageContainer);
 
-console.log("Testing from the scr/index.js file");
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button, i) => {
+  button.addEventListener("click", () => {
+    content.innerHTML = "";
+    if (i === 0) {
+        content.appendChild(imageContainer);
+    } else if (i === 1) {
+        content.appendChild(menuContainer);
+    } else {
+        content.appendChild(aboutContainer);
+    }
+  });
+});
